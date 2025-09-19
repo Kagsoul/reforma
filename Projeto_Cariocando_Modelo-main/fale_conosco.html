@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Cariocando</title>
+</head>
+<body>
+    <!---->
+    <div class="container">
+        <div class="header">
+            <a href="index.html"><img class="logo" src="img/logo.jpg"></a>
+            <h1>Rio de Janeiro - Cidade Maravilhosa</h1>
+        </div>
+        <div class="mainnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://www.apoteose.com/">Quem Somos</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+                <li><a href="fale_conosco.html">Fale Conosco</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <form name="fale_conosco" id="fale_conosco" onsubmit="msg();">
+                <fieldset class="grupo">
+                    <legend>Fale Conosco</legend>
+                    <label>Informe seu nome:</label>
+                    <input class="font_maior" type="text" name="nome" id="nome" maxlength="50" required>
+                    <br><br>
+                    <label>Informe o assunto:</label>
+                    <select class="font_maior" name="assunto" id="assunto">
+                        <option>Selecione o Assunto</option>
+                        <option>Críticas</option>
+                        <option>Sugestões</option>
+                        <option>Elogios</option>
+                        <option>Outros</option>
+                    </select>
+                    <br><br>
+                    <label>Deixe seu recado:</label>
+                    <br>
+                    <textarea class="cx_txt font_maior" name="recado" id="recado" rows="5" maxlength="200" required></textarea>
+                    <br>
+                    <input class="font_maior" type="submit" name="enviar" id="enviar" value="ENVIAR">
+                    <input class="font_maior" type="reset" name="limpar" id="limpar" value="LIMPAR">
+                </fieldset>
+            </form>
+            </br>
+            <div class="tempo">
+                <div id="ww_2b4613aa65187" v='1.3' loc='id' a='{"t":"responsive","lang":"pt","sl_lpl":1,"ids":["wl4478"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Fonte de dados meteorológicos: <a href="https://wetterlang.de" id="ww_2b4613aa65187_u" target="_blank">Wettervorschau 30 tage</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_2b4613aa65187"></script>
+            </div>
+        </br>
+        </div>
+        <div class="footer">
+            <address>Construída por Alessandro Vieira em Maio de 2025</address>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" language="javascript" src="funcao.js"></script>
+<script src="fale.js"></script>
+
+<style>.content {
+  padding: 2rem;
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 155, 58, 0.2);
+  animation: fadeInForm 1s ease-out;
+}
+
+.grupo {
+  background-color: #e3f2fd;
+  border: 2px solid #009b3a;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grupo legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006837;
+  padding: 0 1rem;
+  text-shadow: 0 0 4px #fdd835;
+}
+
+.grupo label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #002d62;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.font_maior,
+.cx_txt {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.font_maior:focus,
+.cx_txt:focus {
+  border-color: #009b3a;
+  box-shadow: 0 0 8px #009b3a;
+  outline: none;
+}
+
+#enviar,
+#limpar {
+  background-color: #fdd835;
+  color: #006837;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#enviar:hover,
+#limpar:hover {
+  background-color: #009b3a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .grupo {
+    padding: 1rem;
+  }
+
+  #enviar,
+  #limpar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+</style>

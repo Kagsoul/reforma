@@ -1,0 +1,96 @@
+.content {
+  padding: 2rem;
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 155, 58, 0.2);
+  animation: fadeInForm 1s ease-out;
+}
+
+.grupo {
+  background-color: #e3f2fd;
+  border: 2px solid #009b3a;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grupo legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006837;
+  padding: 0 1rem;
+  text-shadow: 0 0 4px #fdd835;
+}
+
+.grupo label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #002d62;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.font_maior,
+.cx_txt {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.font_maior:focus,
+.cx_txt:focus {
+  border-color: #009b3a;
+  box-shadow: 0 0 8px #009b3a;
+  outline: none;
+}
+
+#enviar,
+#limpar {
+  background-color: #fdd835;
+  color: #006837;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#enviar:hover,
+#limpar:hover {
+  background-color: #009b3a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .grupo {
+    padding: 1rem;
+  }
+
+  #enviar,
+  #limpar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
